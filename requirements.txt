@@ -1,0 +1,50 @@
+# RAG Langchain+Milvus 项目依赖
+# 日期: 2025-10-23
+
+# ==================== 核心框架 ====================
+# LangChain 核心组件
+langchain==1.0.2
+langchain-core==1.0.0
+langchain-community==0.4
+langchain-text-splitters==1.0.0
+
+# Ollama 集成（用于Embedding和LLM）
+langchain-ollama==1.0.0
+ollama==0.6.0
+
+# LangGraph 工作流
+langgraph==1.0.1
+langgraph-checkpoint==2.1.2
+langgraph-prebuilt==1.0.1
+
+# ==================== 向量数据库 ====================
+# Milvus 向量数据库
+pymilvus==2.6.2
+langchain-milvus==0.2.1
+grpcio==1.76.0
+
+# ==================== 文档处理 ====================
+# 文档加载器依赖
+pypdf==6.1.2                    # PDF文件处理
+python-docx==1.2.0             # Word文档处理
+beautifulsoup4==4.14.2         # HTML文件处理
+lxml==6.0.2                    # HTML/XML解析
+pillow==12.0.0                 # 图像处理
+unstructured==0.18.15          # 非结构化文档处理
+# python-magic                 # 文件类型检测（可选，根据系统需要安装）
+
+# ==================== 其他依赖 ====================
+# IPython（用于Jupyter显示图形）
+ipython==9.6.0
+
+# 数据处理
+numpy==2.3.4
+pandas==2.2.3
+
+# 日志和调试
+python-dotenv==1.1.1           # 环境变量管理
+
+# ==================== 开发工具（可选） ====================
+# pytest==8.4.2                  # 测试框架
+# pytest-asyncio==1.2.0          # 异步测试
+
