@@ -1,6 +1,12 @@
 # Milvus RAG 工具集
 
-基于 **LangChain + Milvus** 实现的企业级 RAG 解决方案。
+基于 **LangChain + Milvus + Ollama** 实现的企业级 RAG 解决方案。
+
+**技术栈**：
+
+- 🦜 **LangChain**：RAG 工作流编排框架
+- 🗄️ **Milvus**：高性能向量数据库
+- 🤖 **Ollama**：本地部署的文本嵌入模型，和 ollama 的云端大语言模型
 
 ## ✨ 核心亮点
 
