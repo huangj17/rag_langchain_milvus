@@ -21,6 +21,79 @@
 
 ---
 
+## 📋 环境准备
+
+在使用本项目之前，请确保已安装以下服务：
+
+### 1. Milvus 向量数据库
+
+**安装方式**（推荐使用 Docker）：
+
+```bash
+# 使用 Docker Compose 一键安装
+wget https://github.com/milvus-io/milvus/releases/download/v2.3.3/milvus-standalone-docker-compose.yml -O docker-compose.yml
+docker-compose up -d
+
+# 验证安装
+docker ps | grep milvus
+```
+
+**官方文档**：
+
+- 📖 安装指南：https://milvus.io/docs/install_standalone-docker.md
+- 🏠 官方网站：https://milvus.io/
+
+**默认配置**：
+
+- 端口：19530
+- 地址：127.0.0.1
+
+### 2. Ollama 模型服务
+
+**安装方式**：
+
+```bash
+# macOS / Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows
+# 访问官网下载安装包
+```
+
+**拉取所需模型**：
+
+```bash
+# 文本嵌入模型（必需）
+ollama pull qwen3-embedding:4b
+
+# 大语言模型（用于答案生成，根据需要选择）
+ollama pull qwen2.5:7b
+# 或其他模型如：llama3.1, mistral 等
+```
+
+**验证安装**：
+
+```bash
+# 检查服务状态
+curl http://localhost:11434/api/tags
+
+# 查看已安装的模型
+ollama list
+```
+
+**官方文档**：
+
+- 📖 安装指南：https://ollama.com/download
+- 🏠 官方网站：https://ollama.com/
+- 📚 模型库：https://ollama.com/library
+
+**默认配置**：
+
+- 端口：11434
+- 地址：http://localhost:11434
+
+---
+
 ## 项目简介
 
 专为 RAG 系统设计的 Milvus 向量数据库工具类集合。
